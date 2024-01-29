@@ -1,0 +1,16 @@
+name: Build and Validate 2GP Beta
+on:
+  workflow_call:
+
+env:
+  CUMULUSCI_SERVICE_github: '{"username": "${{ vars.GH_USER }}", "token": "${{ secrets.GH_TOKEN }}", "email": "cci@github.actions" }'
+
+jobs:
+  build-2gp-package:
+    name: Build and Validate 2GP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build 2GP Beta
+        uses: MyClubHub/cumulusci-release-beta-2gp@v2
+        with:
+          dev-hub-auth-url: "${{ secrets.SFDX_AUTH_URL }}"
