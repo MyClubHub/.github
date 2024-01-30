@@ -1,0 +1,9 @@
+{
+    "name": "MyClubHub Build Workflow",
+    "description": "Creates a second generation beta package from the main branch",
+    "categories": [
+        "continuous-integration",
+        "deployment",
+        "Automation"
+    ]
+}

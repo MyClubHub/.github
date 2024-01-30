@@ -1,0 +1,9 @@
+name: Release 2GP Package
+on: workflow_dispatch
+
+jobs:
+  build-2gp:
+    uses: MyClubHub/workflows/.github/workflows/release-2gp.yml@v3
+    secrets:
+      sfdx-auth-url: ${{ secrets.SFDX_AUTH_URL }}
+      gh-token: ${{ secrets.GH_TOKEN }}

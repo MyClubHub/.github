@@ -1,0 +1,14 @@
+name: Validate Pull Request
+on:
+  pull_request:
+    branches: [$default-branch, develop]
+    paths:
+      - "force-app/**"
+      - "unpackaged/**"
+      - "cumulusci.yml"
+jobs:
+  ci-validation:
+    uses: MyClubHub/workflows/.github/workflows/validate-pull-request.yml@v3
+    secrets:
+      sfdx-auth-url: ${{ secrets.SFDX_AUTH_URL }}
+      gh-token: ${{ secrets.GH_TOKEN }}

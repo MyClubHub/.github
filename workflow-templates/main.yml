@@ -1,0 +1,15 @@
+name: Build and Validate 2GP Beta
+on:
+  push:
+    branches: [$default-branch]
+    paths:
+      - "force-app/**"
+      - "unpackaged/**"
+      - "cumulusci.yml"
+
+jobs:
+  build-2gp:
+    uses: MyClubHub/workflows/.github/workflows/build-2gp.yml@v3
+    secrets:
+      sfdx-auth-url: ${{ secrets.SFDX_AUTH_URL }}
+      gh-token: ${{ secrets.GH_TOKEN }}

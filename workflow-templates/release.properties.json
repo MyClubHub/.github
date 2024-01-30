@@ -1,0 +1,9 @@
+{
+    "name": "MyClubHub Release Workflow",
+    "description": "Promotes the latest beta package to a release",
+    "categories": [
+        "continuous-integration",
+        "deployment",
+        "Automation"
+    ]
+}

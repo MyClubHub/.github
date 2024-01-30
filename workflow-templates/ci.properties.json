@@ -1,0 +1,9 @@
+{
+    "name": "MyClubHub Pull Request Workflow",
+    "description": "Validates a new pull request against a scratch org",
+    "categories": [
+        "continuous-integration",
+        "testing",
+        "Automation"
+    ]
+}
